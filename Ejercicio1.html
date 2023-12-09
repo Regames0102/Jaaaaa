@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Demo</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div id="menu">
+        <h2>FORMULARIOS</h2>
+
+
+        <form method="post" action="https://sweating-piece.000webhostapp.com/PhpPrueba.php">
+            <div id="datosPer">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    Nombre: <span class="error">* </span> <input type="text" name="Nombre" value="">
+                    
+                    <br><br>
+                    Apellidos: <span class="error">* </span> <input type="text" name="usuario" value="">
+                    
+                    <br><br>
+                    Sueldo:<span class="error">* </span> <input type="text" name="email_alumno" value="">
+                    
+                    <br><br>
+                    Categoria:
+                    <span class="error">* </span>
+                    <select name="Categoria">
+                        <option value="Elige">-- Elige --</option>
+                        <option value="Peon">Peón</option>
+                        <option value="Oficial">Oficial</option>
+                        <option value="JefeDepartamento">Jefe Departamento</option>
+                        <option value="Director">Director</option>
+
+                    </select>
+                    
+                    <br><br>
+                    Sexo: <span class="error">* </span>
+                    <input type="radio" name="gender" value="female">Female
+                    <input type="radio" name="gender" value="male">Male
+                   
+                    <br><br>
+                    Aficiones:<span class="error">* </span>
+                    <br>
+                    <input type="checkbox" name="Deportes">Deportes
+                    <input type="checkbox" name="Lectura">Lectura
+                    <input type="checkbox" name="Musica">Musica
+                    <input type="checkbox" name="Cine">Cine
+                    <input type="checkbox" name="Idiomas">Idiomas
+                    <br><br>
+                </fieldset>
+            </div>
+            <br>
+            <input type="submit" name="submit" value="Enviar">
+        </form>
+</body>
+
+</html>
