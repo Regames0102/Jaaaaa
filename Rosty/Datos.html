@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        .error {
+            color: #FF0000;
+        }
+    </style>   
+   
+</head>
+
+<body>
+
+
+    <h2>Alta Datos Empleado</h2>
+
+    <form method="post" action="https://misproyectoz.000webhostapp.com/Rosty/Practica.php">
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+            Nombre: <input type="text" name="Nombre">
+            <span class="error">*
+            <?php echo $nombreErr;?>
+            </span>
+            <br><br>
+
+            Apellidos: <input type="text" name="Apellidos">
+            <span class="error">*
+            <?php echo $apellidosErr;?>
+            </span>
+            <br><br>
+            Fecha de nacimiento: <input type="date" name="Fecha">
+            <span class="error">*
+            <?php echo $fechaErr;?>
+            </span>
+            <br><br>
+            Sueldo: <input type="number" name="Sueldo">
+            <span class="error">*
+            <?php echo $sueldoErr;?>
+            </span>
+            <br><br>
+
+            Categoría:<select id="category" name="category">
+                <option value="">--Elige--</option>
+                <option value="peon">Peón</option>
+                <option value="official">Oficial</option>
+                <option value="department_head">Jefe Departamento</option>
+                <option value="director">Director</option>
+            </select><br><br>
+
+            Sexo:
+            <input type="radio" name="gender" value="femenino">Female
+            <input type="radio" name="gender" value="hombre">Male
+            <span class="error">*
+            <?php echo $sexoErr;?>
+            </span>
+            <br><br>
+
+
+            Aficiones:<span class="error">* </span>
+            <br>
+            <input type="checkbox" name="Deportes">Deportes
+            <input type="checkbox" name="Lectura">Lectura
+            <input type="checkbox" name="Musica">Musica
+            <input type="checkbox" name="Cine">Cine
+            <input type="checkbox" name="Idiomas">Idiomas
+            <br><br>
+
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+
+
+        </fieldset>
+    </form>
+    
+
+</body>
+
+</html>
