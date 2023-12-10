@@ -148,31 +148,14 @@ $empleadosJson = file_get_contents('empleados.json');
 $empleados = json_decode($empleadosJson, true);
 
 // Verificar si hay empleados para mostrar
+if (!empty($empleados)) {
+    // Mostrar la tabla
+    echo "<table>";
+    echo "<tr><th>Datos Personales</th></tr>";
+    echo "<tr><th>Datos No Personales</th></tr>";
 
-?>
-<table>
-    <tr>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Sueldo</th>
-        <th>Categoría</th>
-        <th>Sexo</th>
-        <th>Aficiones</th>
-    </tr>
-    <?php foreach ($empleados as $empleado): ?>
-        <tr>
-            <td><?php echo htmlspecialchars($empleado['nombre']); ?></td>
-            <td><?php echo htmlspecialchars($empleado['apellidos']); ?></td>
-            <td><?php echo htmlspecialchars($empleado['sueldo']); ?></td>
-            <td class='{$categoriaCssClass}'>><?php echo htmlspecialchars($empleado['categoria']); ?></td>
-            <td><?php echo htmlspecialchars($empleado['sexo']); ?></td>
-            <td><?php echo htmlspecialchars($empleado['aficiones']); ?></td>
-        </tr>
-    <?php endforeach; ?>
-</table>
-
-
-foreach ($empleados as $empleado) {
+    // Iterar sobre los empleados y mostrar sus datos en la tabla
+    foreach ($empleados as $empleado) {
         echo "<tr><td>Nombre:</td><td>{$empleado['Nombre']}</td></tr>";
         echo "<tr><td>Apellidos:</td><td>{$empleado['Apellidos']}</td></tr>";
         echo "<tr><td>Sueldo:</td><td>{$empleado['Sueldo']}</td></tr>";
@@ -180,5 +163,13 @@ foreach ($empleados as $empleado) {
         echo "<tr><td>Sexo:</td><td>{$empleado['Sexo']}</td></tr>";
         echo "<tr><td>Aficiones:</td><td>{$empleado['Aficiones']}</td></tr>";
     }
+
+    echo "</table>";
+} else {
+    echo "No hay empleados para mostrar.";
+}
+?>
+
+
 </body>
 </html>

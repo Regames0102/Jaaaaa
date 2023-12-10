@@ -6,7 +6,8 @@
         .error {
             color: #FF0000;
         }
-    </style>   
+    </style>
+       
    
 </head>
 
@@ -15,46 +16,36 @@
 
     <h2>Alta Datos Empleado</h2>
 
-    <form method="post" action="https://misproyectoz.000webhostapp.com/Rosty/Practica.php">
+    <form method="post" action="https://sweating-piece.000webhostapp.com/PracticaCopia.php">
 
         <fieldset>
             <legend>Datos Personales</legend>
             Nombre: <input type="text" name="Nombre">
-            <span class="error">*
-            <?php echo $nombreErr;?>
-            </span>
+            <span class="error">*</span>
             <br><br>
 
-            Apellidos: <input type="text" name="Apellidos">
-            <span class="error">*
-            <?php echo $apellidosErr;?>
-            </span>
+            Apellidos: <input type="text" name="Apellidos" >
+            <span class="error">*</span>
             <br><br>
             Fecha de nacimiento: <input type="date" name="Fecha">
-            <span class="error">*
-            <?php echo $fechaErr;?>
-            </span>
+            <span class="error">*</span>
             <br><br>
             Sueldo: <input type="number" name="Sueldo">
-            <span class="error">*
-            <?php echo $sueldoErr;?>
-            </span>
+            <span class="error">*</span>
             <br><br>
 
-            Categoría:<select id="category" name="category">
+            Categoría:<select id="category" name="Categoria">
                 <option value="">--Elige--</option>
                 <option value="peon">Peón</option>
-                <option value="official">Oficial</option>
-                <option value="department_head">Jefe Departamento</option>
+                <option value="oficial">Oficial</option>
+                <option value="jefe-departamento">Jefe Departamento</option>
                 <option value="director">Director</option>
             </select><br><br>
 
             Sexo:
-            <input type="radio" name="gender" value="femenino">Female
-            <input type="radio" name="gender" value="hombre">Male
-            <span class="error">*
-            <?php echo $sexoErr;?>
-            </span>
+            <input type="radio" name="gender" value="femenino" >Female
+            <input type="radio" name="gender" value="hombre" >Male
+            <span class="error">*</span>
             <br><br>
 
 
